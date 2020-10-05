@@ -1,0 +1,58 @@
+{
+    "$schema": "../schema.cdm.json",
+    "jsonSchemaSemanticVersion": "1.0.0",
+    "imports": [
+        {
+            "corpusPath": "_allImports.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "Maintenance",
+            "extendsEntity": "CdmEntity",
+            "description": "A maintenance record on the asset",
+            "hasAttributes": [
+                {
+                    "dataType": "integer",
+                    "name": "MaintenanceID",
+                    "purpose": "identifiedBy"
+                },
+                {
+                    "dataType": "string",
+                    "name": "MaintenanceType"
+                },
+                {
+                    "dataType": "string",
+                    "name": "MaintenanceDescription"
+                },
+                {
+                    "dataType": "date",
+                    "name": "LastUpdate"
+                },
+                {
+                    "name": "AssetID",
+                    "entity": {
+                        "entityReference": "Asset",
+                        "appliedTraits": [
+                            {
+                                "traitReference": "is.identifiedBy",
+                                "arguments": [
+                                    "Asset/(resolvedAttributes)/AssetID"
+                                ]
+                            }
+                        ]
+                    },"resolutionGuidance": {
+                        "entityByReference": {
+                            "allowReference": true,
+                            "foreignKeyAttribute": {
+                                "dataType": "entityId",
+                                "name": "AssetID"
+                            }
+                        },
+                        "renameFormat": "{m}"
+                    } 
+                }
+            ]
+        }
+    ]
+}

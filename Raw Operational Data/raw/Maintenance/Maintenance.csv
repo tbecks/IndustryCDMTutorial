@@ -1,0 +1,21 @@
+﻿MaintenceID,MaintenanceType,MaintenanceDescription,LastUpdate,AssetID
+1,Preventative,Changing pump seal,1/5/2020,4
+2,Failure,Bit Failure,10/5/2020,2
+3,Alert,Shovel stress,12/5/2020,3
+4,Alert,Shovel stress,15/6/2020,3
+5,Alert,Pipe weld test required,18/6/2020,7
+6,Alert,Pipe weld test required,20/6/2020,9
+7,Alert,Shovel stress,25/6/2020,3
+8,Alert,Shovel stress,3/7/2020,8
+9,Alert,Shovel stress,9/7/2020,8
+10,Alert,Shovel stress,12/7/2020,3
+11,Alert,Pipe weld test required,12/7/2020,7
+12,Preventative,Changing pump seal,18/7/2020,4
+13,Preventative,Changing pump motor,19/7/2020,5
+14,Failure,Pump Failure,20/7/2020,1
+15,Preventative,Pump housing replacement,22/7/2020,10
+16,Preventative,Shovel tooth replacement,29/7/2020,3
+17,Preventative,Shovel tooth replacement,4/8/2020,3
+18,Failure,Bit Failure,15/8/2020,2
+19,Preventative,Changing pump seal,5/9/2020,4
+20,Preventative,Changing pump seal,5/9/2020,10

@@ -1,0 +1,40 @@
+{
+	"$schema": "CdmManifest.cdm.json",
+	"jsonSchemaSemanticVersion": "1.0.0",
+	"IDMVersion": "0.1",
+	"imports": [],
+	"manifestName": "Operations",
+	"explanation": "CDM standard entities",
+	"entities": [{
+			"type": "LocalEntity",
+			"entityName": "Maintenance",
+			"entityPath": "Maintenance.cdm.json/Maintenance"
+		},
+		{
+			"type": "LocalEntity",
+			"entityName": "Asset",
+			"entityPath": "Asset.cdm.json/Asset"
+		},
+		{
+			"type": "LocalEntity",
+			"entityName": "Facility",
+			"entityPath": "Facility.cdm.json/Facility"
+		}
+	],
+	"relationships": [
+        {
+		  "name": "PerformedOn",
+          "fromEntity": "Maintenance.cdm.json/Maintenance",
+          "fromEntityAttribute": "MaintenanceID",
+          "toEntity": "Asset.cdm.json/Asset",
+		  "toEntityAttribute": "MaintenanceID"
+        },
+        {
+		  "name": "BelongsTo",
+		  "fromEntity": "Asset.cdm.json/Asset",
+		  "fromEntityAttribute": "FacilityID",
+		  "toEntity": "Facility.cdm.json/Facility",
+		  "toEntityAttribute": "FacilityID"
+		}
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "jsonSchemaSemanticVersion" : "1.0.0",
+  "imports" : [
+    {
+      "corpusPath" : "cdm:/foundations.cdm.json"
+    }
+  ],
+  "manifestName" : "default",
+  "entities" : [
+    {
+      "type" : "LocalEntity",
+      "entityName" : "Facility",
+      "entityPath" : "Facility.cdm.json/Facility"
+        }
+      ]
+    },
+    {
+      "type" : "LocalEntity",
+      "entityName" : "Facility",
+      "entityPath" : "Facility.cdm.json/Facility"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+	"jsonSchemaSemanticVersion": "1.0.0",
+	"imports": [{
+            "corpusPath": "cdm:/foundations.cdm.json"
+        }, {
+            "corpusPath": "/Facility.cdm.json/Facility"
+        }, {
+            "corpusPath": "/Maintenance.cdm.json/Maintenance"
+        }, {
+            "corpusPath": "/Asset.cdm.json/Asset"
+        }
+	]
+}

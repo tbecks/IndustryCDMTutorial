@@ -1,0 +1,35 @@
+{
+    "$schema": "../schema.cdm.json",
+    "jsonSchemaSemanticVersion": "1.0.0",
+    "imports": [
+        {
+            "corpusPath": "_allImports.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "Facility",
+            "description": "A field facility",
+            "hasAttributes": [
+                {
+                    "dataType": "integer",
+                    "name": "FacilityID",
+                    "purpose": "identifiedBy"
+                },
+                {
+                    "dataType": "string",
+                    "name": "FacilityName"
+                },
+                {
+                    "dataType": "string",
+                    "name": "Location"
+                }
+                ,
+                {
+                    "dataType": "date",
+                    "name": "LastUpdate"
+                }
+            ]
+        }
+    ]
+}

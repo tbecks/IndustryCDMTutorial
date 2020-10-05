@@ -1,0 +1,54 @@
+{
+    "$schema": "../schema.cdm.json",
+    "jsonSchemaSemanticVersion": "1.0.0",
+    "imports": [
+        {
+            "corpusPath": "_allImports.cdm.json"
+        }
+    ],
+    "definitions": [
+        {
+            "entityName": "Asset",
+            "extendsEntity": "CdmEntity",
+            "description": "An Asset or equipment",
+            "hasAttributes": [
+                {
+                    "dataType": "integer",
+                    "name": "AssetID",
+                    "purpose": "identifiedBy"
+                },
+                {
+                    "dataType": "string",
+                    "name": "AssetName"
+                },
+                {
+                    "dataType": "date",
+                    "name": "LastUpdate"
+                },
+                {
+                    "name": "FacilityID",
+                    "entity": {
+                        "entityReference": "Facility",
+                        "appliedTraits": [
+                            {
+                                "traitReference": "is.identifiedBy",
+                                "arguments": [
+                                    "Facility/(resolvedAttributes)/FacilityID"
+                                ]
+                            }
+                        ]
+                    },"resolutionGuidance": {
+                        "entityByReference": {
+                            "allowReference": true,
+                            "foreignKeyAttribute": {
+                                "dataType": "entityId",
+                                "name": "FacilityID"
+                            }
+                        },
+                        "renameFormat": "{m}"
+                    } 
+                }
+            ]
+        }
+    ]
+}
